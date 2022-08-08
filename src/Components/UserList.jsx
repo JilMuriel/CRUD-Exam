@@ -5,11 +5,11 @@ const UserList = (props) => {
     <div className="p-10 border shadow h-full">
       <h2 className="text-2xl mb-5">USER LIST</h2>
 
-      <table className="table-auto w-full p-10 [border-spacing:0.75rem]">
+      <table className="table-auto w-full p-10">
         <thead>
           <tr>
             <th className="w-10 tracking-wide text-left">ID</th>
-            <th className="w-40 tracking-wide text-left border">Name</th>
+            <th className="w-40 tracking-wide text-left">Name</th>
             <th className="w-50 tracking-wide text-left">UserName</th>
             <th className="w-40 tracking-wide text-left">Email</th>
             <th className="w-10 tracking-wide text-left">Actions</th>
