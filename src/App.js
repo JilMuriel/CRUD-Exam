@@ -5,17 +5,17 @@ function App() {
   const usersData = [
     {
       id: 1,
-      name: "Tania",
-      username: "floppydiskette",
-      email: "text@email.com",
+      name: "John Doe",
+      username: "johnDoe",
+      email: "johnDoe@email.com",
     },
     {
       id: 2,
-      name: "Craig",
-      username: "siliconeidolon",
-      email: "text@email.com",
+      name: "Wilbert Smith",
+      username: "wilbertSmith",
+      email: "wilbertSmith@email.com",
     },
-    { id: 3, name: "Ben", username: "benisphere", email: "text@email.com" },
+    { id: 3, name: "Ben Ten", username: "benten", email: "benten@email.com" },
   ];
   const initialFormState = { id: null, name: "", username: "" };
 
