@@ -19,14 +19,16 @@ const UserList = (props) => {
           {props.users.length > 0 ? (
             props.users.map((user) => (
               <>
-                {console.log('user', user)}
+                {console.log("user", user)}
                 <tr className="bg-white" space-x-3 key={user.id}>
                   <td className="tracking-wide text-left pb-3">{user.id}</td>
-                  <td className=" tracking-wide text-left pb-3">{user.name}</td>
-                  <td className=" tracking-wide text-left pb-3">{user.username}</td>
+                  <td className="tracking-wide text-left pb-3">{user.name}</td>
+                  <td className="tracking-wide text-left pb-3">
+                    {user.username}
+                  </td>
 
-                  <td className=" tracking-wide text-left pb-3">{user.email}</td>
-                  <td className=" tracking-wide text-left pb-3">
+                  <td className="tracking-wide text-left pb-3">{user.email}</td>
+                  <td className="tracking-wide text-left pb-3">
                     <div className="flex">
                       <button
                         class="bg-transparent text-sm mr-4 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"

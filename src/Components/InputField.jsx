@@ -1,7 +1,7 @@
 import React from "react";
 
 const InputField = ({ label, type, name, value, onChange }) => (
-  <label className="block mb-5">
+  <label className="block mb-4">
     <span className="block text-sm font-medium text-slate-700">{label}</span>
     <input
       type={type}
