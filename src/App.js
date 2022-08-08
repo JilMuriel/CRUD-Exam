@@ -42,7 +42,6 @@ function App() {
   const updateUser = (id, updatedUser) => {
     setEditing(false);
     setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
-    console.log("asdasdasd");
   };
 
   return (
