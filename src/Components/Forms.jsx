@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import InputField from "./InputField";
 
 const EditUserForm = (props) => {
-  const initialFormState = { id: null, name: "", username: "", email: ""};
+  const initialFormState = { id: null, name: "", username: "", email: "" };
   const [user, setUser] = useState(
     props.editing ? props.currentUser : initialFormState
   );
@@ -32,51 +33,30 @@ const EditUserForm = (props) => {
         resetAddUser();
       }}
     >
-      <label className="block mb-5">
-        <span className="block text-sm font-medium text-slate-700">Name</span>
-        <input
-          type="text"
-          name="name"
-          value={user.name}
-          onChange={handleInputChange}
-          required
-          className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-          focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-          disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none"
-        />
-      </label>
-
-      <label className="block mb-5">
-        <span className="block text-sm font-medium text-slate-700">
-          Username
-        </span>
-        <input
-          type="text"
-          name="username"
-          value={user.username}
-          onChange={handleInputChange}
-          className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-          focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-          disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none"
-          required
-        />
-      </label>
-
-      <label className="block">
-        <span className="block text-sm font-medium text-slate-700">Email</span>
-        <input
-          type="email"
-          name="email"
-          value={user.email}
-          onChange={handleInputChange}
-          
-          className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-          focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-          disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none"
-        />
-      </label>
-
-
+      <InputField
+        label="Name"
+        type="text"
+        name="name"
+        value={user.name}
+        onChange={handleInputChange}
+        required
+      />
+      <InputField
+        label="Username"
+        type="text"
+        name="username"
+        value={user.username}
+        onChange={handleInputChange}
+        required
+      />
+      <InputField
+        label="Email"
+        type="email"
+        name="email"
+        value={user.email}
+        onChange={handleInputChange}
+        required
+      />
       <button className="inline-block mt-10 mr-4 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
         {props.editing ? "Update user" : "Add user"}
       </button>

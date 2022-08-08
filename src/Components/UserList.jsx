@@ -29,7 +29,7 @@ const UserList = (props) => {
                   <td className=" tracking-wide text-left pb-3">
                     <div className="flex">
                       <button
-                        class="bg-transparent text-sm mr-4 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border-blue-500 hover:border-transparent rounded"
+                        class="bg-transparent text-sm mr-4 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
                         onClick={() => {
                           props.editRow(user);
                         }}
