@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CRUD-Exam/static/css/main.f5c28779.css",
+    "main.js": "/CRUD-Exam/static/js/main.cbc4d05d.js",
+    "static/js/787.863dd4fd.chunk.js": "/CRUD-Exam/static/js/787.863dd4fd.chunk.js",
+    "index.html": "/CRUD-Exam/index.html",
+    "main.f5c28779.css.map": "/CRUD-Exam/static/css/main.f5c28779.css.map",
+    "main.cbc4d05d.js.map": "/CRUD-Exam/static/js/main.cbc4d05d.js.map",
+    "787.863dd4fd.chunk.js.map": "/CRUD-Exam/static/js/787.863dd4fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5c28779.css",
+    "static/js/main.cbc4d05d.js"
+  ]
+}
