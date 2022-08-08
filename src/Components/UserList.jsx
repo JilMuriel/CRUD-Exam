@@ -4,19 +4,18 @@ const UserList = (props) => {
   return (
     <div className="p-10 border shadow h-full">
       <h2 className="text-2xl mb-5">USER LIST</h2>
-
-      {props.users.length > 0 ? (
-        props.users.map((user) => (
-          <table className="table-auto w-full p-10">
-            <thead>
-              <tr>
-                <th className="w-10 tracking-wide text-left">ID</th>
-                <th className="w-40 tracking-wide text-left">Name</th>
-                <th className="w-50 tracking-wide text-left">UserName</th>
-                <th className="w-40 tracking-wide text-left">Email</th>
-                <th className="w-10 tracking-wide text-left">Actions</th>
-              </tr>
-            </thead>
+      <table className="table-auto w-full p-10">
+        <thead>
+          <tr>
+            <th className="w-10 tracking-wide text-left">ID</th>
+            <th className="w-40 tracking-wide text-left">Name</th>
+            <th className="w-50 tracking-wide text-left">UserName</th>
+            <th className="w-40 tracking-wide text-left">Email</th>
+            <th className="w-10 tracking-wide text-left">Actions</th>
+          </tr>
+        </thead>
+        {props.users.length > 0 &&
+          props.users.map((user) => (
             <tbody>
               <tr className="bg-white" space-x-3 key={user.id}>
                 <td className="tracking-wide text-left pb-3">{user.id}</td>
@@ -46,10 +45,10 @@ const UserList = (props) => {
                 </td>
               </tr>
             </tbody>
-          </table>
-        ))
-      ) : (
-        <p className="text-lg">No user to display.</p>
+          ))}
+      </table>
+      {props.users.length === 0 && (
+        <p className="mt-5 text-lg">No user to display.</p>
       )}
     </div>
   );
